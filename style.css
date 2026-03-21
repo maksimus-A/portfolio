@@ -1,13 +1,13 @@
 body {
-  background-color: #e3a784; /* #202020; */
-  font-family: Arial;
+  font-family: var(--font, serif);
+  background-color: #202020; /* #e3a784; */
   text-align: left;
   color: #f2f2f2;
 }
 
 .navbar {
   display: flex;
-  max-width: 600px;
+  max-width: 800px;
   background-color: #353535;
   text-align: right;
   color: #fff;
@@ -26,7 +26,7 @@ body {
 }
 
 .container {
-  max-width: 600px;
+  max-width: 800px;
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -44,7 +44,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  margin-bottom: 12px;
+  margin-bottom: 20px;
 }
 
 .project-name {
@@ -54,7 +54,7 @@ body {
 
 .project-tech {
   font-size: 0.875rem;
-  color: #aaa;
+  color: #d3d3d3;
 }
 
 .project-link {
@@ -67,6 +67,14 @@ body {
 .project-description {
   margin: 0 0 16px 0;
   line-height: 1.5;
+}
+
+.project-footnote {
+  margin: 0 0 16px 0;
+  line-height: 1.5;
+  font-size: 0.8rem;
+  font-style: italic;
+  color: #d3d3d3;
 }
 
 .project-image {
@@ -112,3 +120,12 @@ body {
 .code-box .token.comment { color: #AFAFAF; }     /* // ... */
 .code-box .token.punctuation,
 .code-box .token.operator { color: #EBEBEB; }    /* ( ) { } ; = + ... */
+
+
+/* monkemus image */
+.monkemus-image {
+  max-width: 600px;
+  border-radius: 8px;
+  display: block;
+  margin: 0 auto;
+}
