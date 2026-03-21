@@ -4,14 +4,15 @@
 <head>
   <title>Projects</title>
   <link rel="stylesheet" href="../style.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
 </head>
 
 <body>
   <div class="navbar">
-    <a href="../index.html">Maksimus</a>
-    <a href="../about/">About</a>
-    <a href="../projects/">Projects</a>
-  </div>
+    <a href="../">Maksimus</a>
+    <a href="/projects/">Projects</a>
+    <a href="../journal/">Journal</a>
+    </div>
   <div class="container">
     <div class="projects-container">
         <h1>Projects</h1>
@@ -21,8 +22,36 @@
             <h2 class="project-name">Max-- Compiler</h2>
             <span class="project-tech">C, C++</span>
           </header>
-          <a href="https://github.com/maksimus-A/max--" class="project-link">View on GitHub</a>
-          <p class="project-description">A compiler for my own language I invented, called max--.</p>
+          <a href="https://github.com/maksimus-A/max--" target="_blank" rel="noopener noreferrer" class="project-link">GitHub</a>
+          <p class="project-description">A compiler for my own language I invented, called max--. It is written end to end, including a lexer, parser, IR generator, register allocator, and code generator.</p>
+          <p class="project-description">It supports basic arithmetic, variables, functions, and control flow. The frontend is written in C, and the backend is written in C++.</p>
+          <div class="code-box">
+            <pre><code class="language-mmm">// Example max-- code
+fn add(int x, int y): int {
+    return x + y;
+}
+
+fn main(): int {
+    int x = 1;
+    int y = 2;
+    int i = 0;
+    while (i < 5) {
+        if (i - x == 0 or i - y == 0) {
+            print(add(x, y)); // 3
+        }
+        else {
+            print(2 * (add(x, y))); // 6
+        }
+        i = i + 1;
+    }
+
+    return 0;
+} // Prints: 6 3 3 6 6</code></pre>
+
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+            <script src="../prism-mmm.js"></script>
+            <script>Prism.highlightAll();</script>
+          </div>
         </article>
         
         <article class="project-card">

@@ -1,5 +1,5 @@
 body {
-  background-color: #202020;
+  background-color: #e3a784; /* #202020; */
   font-family: Arial;
   text-align: left;
   color: #f2f2f2;
@@ -80,3 +80,35 @@ body {
   display: none;
 }
 
+/* code box */
+.code-box {
+  background-color: #1e1e1e;
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 16px 0;
+}
+
+.code-box pre {
+  margin: 0;
+  padding: 20px;
+  overflow-x: auto;
+}
+
+.code-box code {
+  font-family: 'Fira Code', 'Consolas', 'Monaco', 'Courier New', monospace;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #d4d4d4;
+}
+
+/* prism - CODE_* color scheme */
+.code-box .token.fn-keyword { color: #C9C279; }   /* fn */
+.code-box .token.function-call { color: #BF5151; }  /* main, add, print - function names */
+.code-box .token.variable { color: #EBEBEB; }     /* x, y, i - variables (punctuation-colored) */
+.code-box .token.type { color: #9B69CF; }        /* int, float */
+.code-box .token.number,
+.code-box .token.string { color: #B5CEA8; }      /* literals: 0, 1, 2.71, "..." */
+.code-box .token.keyword { color: #78BDC0; }     /* return, if, else, while */
+.code-box .token.comment { color: #AFAFAF; }     /* // ... */
+.code-box .token.punctuation,
+.code-box .token.operator { color: #EBEBEB; }    /* ( ) { } ; = + ... */
