@@ -38,6 +38,10 @@ body {
   padding: 24px;
   margin-bottom: 24px;
   border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  overflow: visible;
 }
 
 .project-header {
@@ -78,9 +82,24 @@ body {
 }
 
 .project-image {
+  width: auto;
   max-width: 100%;
+  min-width: 0;
+  height: auto;
   border-radius: 4px;
   display: block;
+  align-self: center;
+  margin: 4px 0 0 0;
+  /* Dark-on-dark cards need a light edge + strong shadow to read */
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.08),
+    0 1px 2px rgba(0, 0, 0, 0.5),
+    0 10px 24px rgba(0, 0, 0, 0.55),
+    0 20px 48px rgba(0, 0, 0, 0.35);
+}
+
+.project-image + .project-image {
+  margin-top: 20px;
 }
 
 /* Hide image section when there's no image (optional) */
@@ -121,7 +140,7 @@ body {
 .code-box .token.punctuation,
 .code-box .token.operator { color: #EBEBEB; }    /* ( ) { } ; = + ... */
 
-
+/* images */
 /* monkemus image */
 .monkemus-image {
   max-width: 750px;
