@@ -24,7 +24,9 @@
         <h2 class="game-title">Overrun</h2>
         <a href="https://bluchie.itch.io/overrun" class="game-link" target="_blank" rel="noopener noreferrer">itch.io</a>
         <p class="game-description">A short, fun roguelike where you upgrade your gun to obliterate waves of enemies!</p>
-        <p class="game-description">I think the time between upgrades takes too long, but it still ends up being fun. Stick it out to the third upgrade, they're super-upgrades, and a lot more fun to play with.</p>
+        <button class="game-toggle game-see-more" type="button">See More...</button>
+        <p class="game-description game-description-extra" hidden>I think the time between upgrades takes too long, but it still ends up being fun. Stick it out to the third upgrade, they're super-upgrades, and a lot more fun to play with.</p>
+        <button class="game-toggle game-see-less" type="button" hidden>See Less...</button>
         <img src="../images/overrun-sc.png" alt="Where's the game?" class="game-image">
       </article>
 
@@ -32,19 +34,54 @@
         <h2 class="game-title">Grocery Run</h2>
         <a href="https://bluchie.itch.io/grocery-run" class="game-link" target="_blank" rel="noopener noreferrer">itch.io</a>
         <p class="game-description">Your mom needs you to get some groceries. The nearest store is 10,000km away though...</p>
-        <p class="game-description">A short fun platformer I made. I tried to make it more polished; it was meant to be a bigger project, but I stopped at 2 worlds.</p>
+        <button class="game-toggle game-see-more" type="button">See More...</button>
+        <p class="game-description game-description-extra" hidden>A short fun platformer I made. I tried to make it more polished; it was meant to be a bigger project, but I stopped at 2 worlds.</p>
+        <button class="game-toggle game-see-less" type="button" hidden>See Less...</button>
         <img src="../images/grocery-run-sc.png" alt="Where's the game?" class="game-image">
       </article>
 
       <article class="game-card">
         <h2 class="game-title">Paulie's Ball</h2>
-        <a href="https://bluchie.itch.io/paulies-ball" class="game-link">itch.io</a>
+        <a href="https://bluchie.itch.io/paulies-ball" class="game-link" target="_blank" rel="noopener noreferrer">itch.io</a>
         <p class="game-description">Paulie dropped his ball down a huge cliff. He's really sad. Help him get it back.</p>
-        <p class="game-description">Inspired by Faudian games like Jump King, this game has a simple mechanic but is endlessly frustrating. The first world is polished, but the rest is kind of unfinished. Give it a try if you'd like!</p>
+        <button class="game-toggle game-see-more" type="button">See More...</button>
+        <p class="game-description game-description-extra" hidden>Inspired by Faudian games like Jump King, this game has a simple mechanic but is endlessly frustrating. The first world is polished, but the rest is kind of unfinished. Give it a try if you'd like!</p>
+        <button class="game-toggle game-see-less" type="button" hidden>See Less...</button>
+        <img src="../images/paulies-ball-sc.png" alt="Where's the game?" class="game-image">
+      </article>
+
+      <article class="game-card">
+        <h2 class="game-title">Marble Racers</h2>
+        <a href="https://bluchie.itch.io/marble-racers" class="game-link" target="_blank" rel="noopener noreferrer">itch.io</a>
+        <p class="game-description">Navigate your marble through a series of obstacles to the finish line. Inspired by Hamsterball, an old game I used to love.</p>
+        <button class="game-toggle game-see-more" type="button">See More...</button>
+        <p class="game-description game-description-extra" hidden>Inspired by Faudian games like Jump King, this game has a simple mechanic but is endlessly frustrating. The first world is polished, but the rest is kind of unfinished. Give it a try if you'd like!</p>
+        <button class="game-toggle game-see-less" type="button" hidden>See Less...</button>
         <img src="../images/paulies-ball-sc.png" alt="Where's the game?" class="game-image">
       </article>
     </div>
   </div>
+  <script>
+    document.querySelectorAll('.game-card').forEach((card) => {
+      const seeMore = card.querySelector('.game-see-more');
+      const seeLess = card.querySelector('.game-see-less');
+      const extra = card.querySelector('.game-description-extra');
+
+      if (!seeMore || !seeLess || !extra) return;
+
+      seeMore.addEventListener('click', () => {
+        extra.hidden = false;
+        seeMore.hidden = true;
+        seeLess.hidden = false;
+      });
+
+      seeLess.addEventListener('click', () => {
+        extra.hidden = true;
+        seeMore.hidden = false;
+        seeLess.hidden = true;
+      });
+    });
+  </script>
 </body>
 
 </html>
